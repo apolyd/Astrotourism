@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Lookattest : MonoBehaviour
 {
     public Transform focus;
     public NavMeshAgent agent;
     public GameObject Ingenuity;
+    public Text pistolText;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,12 @@ public class Lookattest : MonoBehaviour
             relativePos.y = 0f;
             Quaternion toRotation = Quaternion.LookRotation(relativePos);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 1 * Time.deltaTime);
+            pistolText.text = "Ingenuity is idle";//new code
         }
         else
         {
-           Ingenuity.GetComponent<IngenuityHandler>().turn = true;
+            pistolText.text = "Ingenuity is moving";//new code
+            Ingenuity.GetComponent<IngenuityHandler>().turn = true;
             if (agent.remainingDistance <= 0.1f)
             {
                 agent.isStopped = true;

@@ -1,12 +1,122 @@
 fileFormatVersion: 2
 guid: 39ebb0ac1d0303742aa290a84677dd29
 ModelImporter:
-  serializedVersion: 20101
+  serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blades
+    second: {fileID: 2100000, guid: 25178a28a7fb33447aa302c788cb3819, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brushedMetal
+    second: {fileID: 2100000, guid: 245edff59cc668a45bb71301581c4dca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cameraBottom
+    second: {fileID: 2100000, guid: b689e481ada2a6e4f97cc2dcfd53be1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carbonFiber
+    second: {fileID: 2100000, guid: 863481fdf68aa294caf5973c6efbe51f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gold
+    second: {fileID: 2100000, guid: 286c8448ceeb64a43a8f979e353eadf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gunmetal
+    second: {fileID: 2100000, guid: e0d8e4c26c1c5584dab11b3295d396f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metallicFeet
+    second: {fileID: 2100000, guid: 11274d174bc17a545b6466ae260e4c80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metallicRods
+    second: {fileID: 2100000, guid: 5326b6c8c11d34444828fdd984c29323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tinFoil
+    second: {fileID: 2100000, guid: 33002ea2a1106c94f9985707755d660d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whiteMetal
+    second: {fileID: 2100000, guid: c5a3304bd2bfeb84787086a8bd010be9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CarbonFiber_albedo2
+    second: {fileID: 2800000, guid: 7a8c9c90b05108a4b9fa654804256309, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CarbonFiber_normal
+    second: {fileID: 2800000, guid: b0d047fc83a81d04d920d8120939eb37, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blade
+    second: {fileID: 2800000, guid: cc4318d080645c841b81ca48514f22c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: brushedMetal
+    second: {fileID: 2800000, guid: 593a5da152bcf924d99e73f4739dd05e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cameras_diff
+    second: {fileID: 2800000, guid: d9535363a38efe74980291ff70b9f03e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cameras_metal
+    second: {fileID: 2800000, guid: b061e89316301c149ac095f86e16cb93, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chrome
+    second: {fileID: 2800000, guid: 86869dd0c0a08ed499b97843861e3cdc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: foil_d
+    second: {fileID: 2800000, guid: 6c4a4884c567b5c4f8d5c6947f178774, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: foil_n
+    second: {fileID: 2800000, guid: 42c65c07f3a0e2a458f9532d6d71314e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: gunMetal01
+    second: {fileID: 2800000, guid: f5a439605d7e6414ea7d26cd32b97215, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: metalBars05
+    second: {fileID: 2800000, guid: 20ae389b7b8b40d47b450073b507815f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: mtalicCircles02_b
+    second: {fileID: 2800000, guid: 75e7667ac8ef9df4d99d35c547f19fe7, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -98,6 +208,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

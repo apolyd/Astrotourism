@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.steamvrtest.exe",
+      "app_key": "application.generated.unity.marsvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Unity Projects\\SteamVR test\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "D:\\Unity Projects\\Astrotourism\\SteamVR test\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "SteamVR test [Testing]"
+          "name": "MarsVR [Testing]"
         }
       }
     }

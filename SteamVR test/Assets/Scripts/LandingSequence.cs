@@ -7,17 +7,18 @@ public class LandingSequence : MonoBehaviour
 {
     public float speed = 1.0f;
     public Transform target;
-    public GameObject door,HUDCanvas,VoiceAudioManager;
-    public Text DoorTextStatus,MetersToTouchdown,HUDTextInfo,SpeedInfo;
-    public RawImage DoorStatusImage;
-    public Texture OpenTexture;
-    public bool HUDIsActive;
+    public GameObject /*door,HUDCanvas,*/VoiceAudioManager;
+    public Text /*DoorTextStatus,*/MetersToTouchdown,/*HUDTextInfo,*/SpeedInfo;
+    //public RawImage DoorStatusImage;
+    //public Texture OpenTexture;
+    //public GameObject LandingPivot; //change pivot to determine when we touch the ground
+    //public bool HUDIsActive;
     //public GameObject label, roversVisibility;
 
     void Start()
     {
-        HUDIsActive = false;
-        SpeedInfo.text = speed.ToString()+" m/s";
+        //HUDIsActive = false;
+        //SpeedInfo.text = speed.ToString()+" m/s";
         VoiceAudioManager.GetComponent<VoiceAudioManager>().UpdateManager();
     }
 
@@ -25,14 +26,15 @@ public class LandingSequence : MonoBehaviour
     void Update()
     {
         float DistanceToLand = Vector3.Distance(transform.position, target.position);
+        Debug.Log(DistanceToLand);
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);// calculate distance to move
         MetersToTouchdown.text = DistanceToLand.ToString()+" meters"; //update position on displays
-        if (DistanceToLand <= 20f && HUDIsActive == false) // at 20 meters spam the initialization text on hud and turn HUD on
+        if (DistanceToLand <= 20f /*&& HUDIsActive == false*/) // at 20 meters spam the initialization text on hud and turn HUD on
         {
-            HUDCanvas.SetActive(true);
-            HUDTextInfo.GetComponent<HUDMessages>().DisplayGlobalMessage("HUD is now active.");
-            HUDIsActive = true;
+           // HUDCanvas.SetActive(true);
+           // HUDTextInfo.GetComponent<HUDMessages>().DisplayGlobalMessage("HUD is now active.");
+           // HUDIsActive = true;
         }
 
         if(DistanceToLand <= 15f && VoiceAudioManager.GetComponent<VoiceAudioManager>().state == VACockpitState.FifteenToLand)
@@ -61,11 +63,11 @@ public class LandingSequence : MonoBehaviour
                 VoiceAudioManager.GetComponent<VoiceAudioManager>().PlayNextClipInQueue();
                 VoiceAudioManager.GetComponent<VoiceAudioManager>().UpdateManager();
             }
-            MetersToTouchdown.text = 0.ToString();
+            MetersToTouchdown.text = 0f.ToString();
             GameObject.FindGameObjectWithTag("Player").transform.parent = null;
-            door.GetComponent<DoorHandle>().hasLanded = true;
-            DoorTextStatus.text = "Open";
-            DoorStatusImage.texture = OpenTexture;
+            //door.GetComponent<DoorHandle>().hasLanded = true;
+            //DoorTextStatus.text = "Open";
+            //DoorStatusImage.texture = OpenTexture;
             //GameObject.FindGameObjectWithTag("Door").GetComponent<MeshCollider>().enabled = true;
             //label.SetActive(true);
             //roversVisibility.SetActive(true);
